@@ -1,0 +1,35 @@
+<mat-error *ngIf="error">
+    {{errorMessage}}
+  </mat-error>
+  <form [formGroup]="createUser" (ngSubmit)="onSubmit()">  
+      <mat-form-field class="col-12">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email" placeholder="example@gmail.com">
+        <mat-error *ngIf="createUser.controls.email?.hasError('email') && !createUser.controls.email?.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="createUser.controls.email?.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-12">
+        <mat-label>Username</mat-label>
+        <input type="text" matInput formControlName="username" placeholder="myNewUsername" required minlength="10"
+          maxlength="15">
+      </mat-form-field>
+      <mat-form-field class="col-12">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password" required minlength="8" maxlength="30">
+        <mat-error *ngIf="!createUser.controls.password.valid" class="col-12">
+            Password must be 8-30 character, contain at least 1 capital letter, 1 number, and 1 lower case letter.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-12 mt-7">
+        <mat-label>Confirm Password</mat-label>
+        <input type="password" matInput formControlName="confirmPassword" required minlength="8" maxlength="30">
+        <mat-error *ngIf="!passwordsMatch() && createUser.controls.password.valid">Passwords do no match!</mat-error>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" 
+              [disabled]="!createUser.valid || !passwordsMatch()" class="col-12">Submit</button>
+  </form>

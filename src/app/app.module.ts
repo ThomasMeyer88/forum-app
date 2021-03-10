@@ -12,11 +12,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 
+//components & services
+import { HeaderComponent } from './header/header.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { LoginService } from './services/login-service.service';
+import { UserSignupComponent } from './user-signup/user-signup.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    UserLoginComponent,
+    UserSignupComponent,
+    LoginService
   ],
   imports: [
     BrowserModule,

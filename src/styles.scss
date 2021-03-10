@@ -1,1 +1,128 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+$edge-color: #edeff1;
+$background-color-alt: #ffffff;
+$background-color: #DAE0E6;
+
+@mixin thinBottomBorder($color) {
+    border-bottom: 1px solid $color;
+}
+
+@mixin noPaddingNoMargin {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    @include noPaddingNoMargin();
+    background-color: $background-color;
+}
+
+app-header {
+    @include thinBottomBorder($edge-color);
+    background-color: $background-color-alt;
+    width: 100%;
+    float: left;
+    height: 2.4rem;
+    padding: .25rem;
+    margin: 0;
+}
+
+app-header button {
+    width: 120px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+app-header div {
+    height: 2.4rem;
+    padding: .25rem;
+}
+
+.row {
+    float: left;
+}
+.col-1 {
+    width: (1/12)*100%;
+}
+.col-2 {
+    width: (2/12)*100%;
+}
+.col-3 {
+    width: (3/12)*100%;
+}
+.col-4 {
+    width: (4/12)*100%;
+}
+.col-5 {
+    width: (5/12)*100%;
+}
+.col-6 {
+    width: (6/12)*100%;
+}
+.col-7 {
+    width: (7/12)*100%;
+}
+.col-8 {
+    width: (8/12)*100%;
+}
+.col-9 {
+    width: (9/12)*100%;
+}
+.col-10 {
+    width: (10/12)*100%;
+}
+.col-11 {
+    width: (11/12)*100%;
+}
+.col-12 {
+    width: (12/12)*100%;
+}
+
+.p-1 {
+    padding: 0.2rem;
+}
+.p-2 {
+    padding: 0.4rem;
+}
+.p-3 {
+    padding: 0.6rem;
+}
+.p-4 {
+    padding: 0.8rem;
+}
+.p-5 {
+    padding: 0.10rem;
+}
+
+.mt-1 {
+    margin-top: 0.2rem;
+}
+.mt-2 {
+    margin-top: 0.4rem;
+}
+.mt-3 {
+    margin-top: 0.6rem;
+}
+.mt-4 {
+    margin-top: 0.8rem;
+}
+.mt-5 {
+    margin-top: 1rem;
+}
+.mt-6 {
+    margin-top: 1.2rem;
+}
+.mt-7 {
+    margin-top: 1.4rem;
+}
+.mt-8 {
+    margin-top: 1.6rem;
+}
+.mt-9 {
+    margin-top: 1.8rem;
+}
+.mt-10 {
+    margin-top: 2rem;
+}
