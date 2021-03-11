@@ -12,7 +12,8 @@ import { User } from '../models/user';
 export class UserSignupComponent implements OnInit {
 
   error: Boolean = false;
-
+  errorMessage: String = 'An error has occurred';
+  
   createUser = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     username: new FormControl('', Validators.required),

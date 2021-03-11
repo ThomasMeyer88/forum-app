@@ -25,9 +25,7 @@ import { UserSignupComponent } from './user-signup/user-signup.component';
     AppComponent,
     HeaderComponent,
     UserLoginComponent,
-    UserSignupComponent,
-    LoginService
-  ],
+    UserSignupComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
